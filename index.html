@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa Web SIG-747</title>
+    <!-- Visualización de mapas -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Contiene estilos -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Mapa Web SIG-747</h1>
+      <div class="layout">
+        <!-- TABLA COORDENADAS -->
+        <div class="panel">
+          <h2>Coordenadas</h2>
+          <table id="tablaCoordenadas">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTabla"></tbody>
+          </table>
+
+          <div class="botones">
+            <button onclick="guardarCoordenadas()">Guardar en BD</button>
+            <button onclick="generarPDF()">Generar PDF</button>
+          </div>
+        </div>
+
+        <!-- MAPA -->
+        <div id="mapa"></div>
+      </div>
+    </div>
+
+    <!-- Libreria LEAFLET Manejo de mapas -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- Libreria jsPDF Permite generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- SQL.js (SQLite en el navegador) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+    <!-- Contiene la lógica-->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1d2a;
+  color: #e0f2ff;
+}
+
+.contenedor {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #4fc3f7;
+  margin-bottom: 20px;
+}
+
+/* DIVIDE PANTALLA EN 2 */
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* PANEL TABLA COORDENADAS */
+.panel {
+  width: 30%;
+  background: #112b3c;
+  padding: 15px;
+  border-radius: 12px;
+  height: 700px;
+  overflow-y: auto;
+  h2 {
+    text-align: center;
+  }
+}
+
+/* PANEL MAPA */
+#mapa {
+  width: 70%;
+  height: 730px;
+  border-radius: 12px;
+}
+
+/* BOTONES */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* BOTON DE PDF Y GUARDAR */
+button {
+  background: #0288d1;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #03a9f4;
+}
+
+/* TABLA DE COORDENADAS */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+thead {
+  background: #0f3a55;
+  color: #4fc3f7;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #1e3a4d;
+}
+
+tbody tr {
+  background: #0f2533;
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: #132f42;
+  transform: scale(1.01);
+}
